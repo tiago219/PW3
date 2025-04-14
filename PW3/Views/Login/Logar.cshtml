@@ -1,13 +1,17 @@
-﻿<form action="" method="">
-	<label>Nome</label>
-	<input type="type"
-		   name="name"
+﻿@model LoginModel
+<form action="" method="get">
+	<label>Email</label>
+	<input type="email"
+		   name="Login"
 		   value="" />
 	<label>Senha</label>
 	<input type="password"
-		   name="senha"
+		   name="Senha"
 		   value="" />
-	<button>
+	<button type ="submit" class="btn btn-primary">
 		Logar
 	</button>
 </form>
+<h1>@Model.Login</h1>
+
+<h1>@Model.Senha</h1>
