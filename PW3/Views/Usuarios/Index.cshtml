@@ -4,9 +4,9 @@
     <<<<<<< HEAD
     =======
     <div class="row">
-        <div class="col-8">
-            <a href="/Usuarios/Novo" class="btn btn-success">Cadastrar</a>
-        </div>
+    <div class="col-2">
+        <a href="/Usuarios/Create" class="btn btn-success">Cadastrar</a>
+    </div>
         <div class="col-8">
             <form action="/Usuarios/Index" method="get">
                 <div class="input-group mb-3">
@@ -37,3 +37,20 @@
         }
         </tbody>
     </table>
+
+    <button id="botao" onclick="Piscar()">
+        Clique aqui para piscar
+    </button>
+    <script>
+        function Piscar()
+        {
+            var botao = document.getElementById("botao")
+            if(botao.style.backgroundColor == 'red')
+            {
+                botao.style.backgroundColor = 'blue'
+            }
+            else{
+                botao.style.backgroundColor = 'red'
+            }
+        }
+    </script>

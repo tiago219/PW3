@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using PW3.Entidades;
 using System.Collections.Generic;
+using System.Reflection.Metadata.Ecma335;
 
 namespace PW3.Controllers
 {
@@ -10,7 +11,7 @@ namespace PW3.Controllers
         private readonly string connectionString = "Server=localhost;Database=aulabd2;Uid=root;Pwd=;";
         public IActionResult Index()
         {
-            
+
             List<UsuarioEntidade> model = new List<UsuarioEntidade>();
 
             using var connection = new MySqlConnection(connectionString);
@@ -29,5 +30,9 @@ namespace PW3.Controllers
             connection.Close();
             return View(model);
         }
+
+        public IActionResult Create() { 
+         return View();
+    }
     }
 }
